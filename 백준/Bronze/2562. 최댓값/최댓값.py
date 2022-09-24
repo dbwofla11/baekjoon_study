@@ -1,12 +1,14 @@
-rank = [] 
-for i in range(9):
-    a = int(input())
-    rank.append(a)
+a = []
+max = 0
 
-max = -9999999999999999999999999999999999999999999999999999999999999999999
-for i in rank: # [4,2,3,1]
-    if max < i:
-        max = i
-        
+
+for i in range(9):
+  q = int(input())
+  a.append(q)
+
+for i in a:
+  if i >= max:
+    max = i
+
 print(max)
-print(rank.index(max) + 1)
+print(a.index(max) + 1)
