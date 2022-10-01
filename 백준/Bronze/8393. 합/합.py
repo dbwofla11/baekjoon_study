@@ -1,6 +1,5 @@
-n = int(input())
-sum = 0 
-for i in range(n +1):
-  sum = (sum + i)
-
-print(sum)
+x = int(input())
+y = 0
+for i in range(1, x + 1 , 1):
+    y = y + i
+print(y)
