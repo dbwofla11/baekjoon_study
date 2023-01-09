@@ -12,8 +12,7 @@ while True:
     for i in list(map(int , input().split())):
         if index == 0 and tmp_i == 0:
             n = i
-            tmp_i += 1
-            index += 1
+            index = 1
         else:
             element.append(int(''.join(reversed(str(i)))))
 
