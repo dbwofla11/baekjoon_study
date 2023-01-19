@@ -1,15 +1,14 @@
-arr=[]
+njy = []
 for i in range(9):
-    arr.append(int(input()))
+    x = int(input())
+    njy.append(x)
 
 for i in range(9):
-    for j in range(9):
-        if sum(arr)-arr[i]-arr[j]==100:
-            x,y=i,j
-            break
-            
-arr.remove(arr[x])
-arr.remove(arr[y])
-arr.sort()
-for i in arr:
-    print(i)
+    for j in range(i + 1 , 9):
+        if sum(njy) - (njy[i] + njy[j]) == 100:
+            a = njy[i]
+            b = njy[j]
+njy.remove(a)
+njy.remove(b)
+for c in njy:
+    print(c)
