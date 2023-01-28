@@ -1,19 +1,17 @@
-# 2839 설탕 배달 
+n = int(input())
 
-num = int(input())
-bag = 0
+cnt = 0
 
-while num >= 0:
-    if num % 5 == 0:
-       bag += num // 5
-       print(bag)
-       break
-    num -= 3
-    bag += 1
-else:
-    print(-1) # 설탕이 마이너스가 되면 -1 출력 예) 4 
+while True:
+    if n >= 0:
+        if n % 5 == 0:
+            cnt += n // 5
+            break
+
+        n -= 3
+        cnt += 1
+    else:
+        cnt = -1
+        break
     
-
-
-
-    
+print(cnt)
