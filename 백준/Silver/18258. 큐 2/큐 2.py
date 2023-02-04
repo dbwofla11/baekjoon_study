@@ -1,30 +1,33 @@
-# 10845 큐 
+# 18258 큐 2
 import sys
 from collections import deque
 
+n = int(input())
+q = deque([])
 
-num = int(input())
-qu = deque([])
-
-for i in range(num):
-    msg = sys.stdin.readline().split()
-
-    if msg[0] == "push":
-        qu.append(msg[1])
-    elif msg[0] == "pop":
-        if qu: print(qu.popleft())
-        else: print(-1)
-    elif msg[0] == "size":
-        print(len(qu))
-    elif msg[0] == "empty":
-        if qu: print(0)
-        else: print(1)
-    elif msg[0] == "front": 
-        if qu: print(qu[0])
-        else: print(-1)
-    elif msg[0] == "back":
-        if qu: print(qu[-1])
-        else: print(-1)
-    else:
-        pass
-
+for i in range(n):
+    ops = list(map(str , sys.stdin.readline().split()))
+    if ops[0] == "push":
+        q.append(ops[1])
+    if ops[0] == "pop":
+        if q:
+            print(q.popleft())
+        else:
+            print(-1)
+    if ops[0] == "size":
+        print(len(q))
+    if ops[0] == "empty":
+        if q:
+            print(0)
+        else:
+            print(1)
+    if ops[0] == "front":
+        if q:
+            print(q[0])
+        else:
+            print(-1)
+    if ops[0] == "back":
+        if q:
+            print(q[-1])
+        else:
+            print(-1)
