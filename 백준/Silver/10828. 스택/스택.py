@@ -1,34 +1,26 @@
-# 10828 스택 구현 
 import sys
 
-num = int(input())
+x = int(input())
 stack = []
-for i in range(num):
-    msg = sys.stdin.readline().split()
-
-    if msg[0] == "push": 
-        stack.append(msg[1])
-
-    elif msg[0] == "pop" :
-        if len(stack) == 0: 
-            print(-1)
-        else: 
+for i in range(x):
+    ops = list(map(str , sys.stdin.readline().split()))
+    # num = int(ops[1])
+    if ops[0] == "push":
+        stack.append(int(ops[1]))
+    if ops[0] == "pop":
+        if stack:
             print(stack.pop())
-
-    elif msg[0] == "size": 
-        print(len(stack))
-
-    elif msg[0] == "empty":
-        if len(stack) == 0:
-             print(1)
         else:
-             print(0)
-
-    elif msg[0] == "top": 
-        if len(stack) == 0:
-             print(-1)
-        else: 
+            print(-1)
+    if ops[0] == "size":
+        print(len(stack))
+    if ops[0] == "empty":
+        if stack:
+            print(0)
+        else:
+            print(1)
+    if ops[0] == "top":
+        if stack:
             print(stack[-1])
-    else:
-        pass
-    
+        else:
+            print(-1)
